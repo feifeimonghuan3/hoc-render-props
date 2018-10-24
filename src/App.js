@@ -9,12 +9,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MyText
+        <MyText //HOC组件
             style={{color: '#FFF'}}
             hoverStyle={{color: '#F00'}}
             title={'hello, Hoc'}
         />
-        <MyTextRenderProps
+        <MyTextRenderProps // renderprops组件
             style={{color: '#FFF'}}
             hoverStyle={{color: '#feff12'}}
             title={'hello, Hoc'}
