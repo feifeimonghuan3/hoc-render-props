@@ -24,7 +24,7 @@ export default function(Com) {
       let style = {};
       for(let key in this.props.changeStyle) {
         defaultStyle[key] = this.props.changeStyle[key][0];
-        style[key] = spring(this.props.changeStyle[key][1], key == 'opacity' ? {stiffness: 60, damping: 30} : {});
+        style[key] = spring(this.props.changeStyle[key][1], key === 'opacity' ? {stiffness: 60, damping: 30} : {});
       }
       console.log(defaultStyle);
       console.log(style);

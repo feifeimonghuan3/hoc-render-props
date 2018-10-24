@@ -102,6 +102,18 @@ class App extends Component {
             )
           }}
         />
+        {/*<Ani*/}
+          {/*changeStyle={{*/}
+            {/*left: [200, 0],*/}
+            {/*opacity: [0, 1],*/}
+          {/*}}*/}
+          {/*style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}*/}
+          {/*childrenRender={() => {*/}
+            {/*return (*/}
+              {/*<div style={{backgroundColor: '#c47b47',width: 30, height:30, marginTop: 20,}}></div>*/}
+            {/*)*/}
+          {/*}}*/}
+        {/*/>*/}
       </div>
     );
   }
