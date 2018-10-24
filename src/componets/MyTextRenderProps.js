@@ -30,6 +30,7 @@ class MyTextRenderProps extends React.Component {
             onMouseLeave: this.handleHoverEnd,
             title: this.props.title,
         }
+        // 给children传过来的函数添加props
         return this.props.children(props)
     }
 }
