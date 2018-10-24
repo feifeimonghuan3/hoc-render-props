@@ -1,0 +1,31 @@
+.Animation{
+    animation: myfirst 1s;
+    width: 50px;
+    background: red;
+    height: 50px;
+    position: relative;
+    left: 0;
+    top: 0px;
+    opacity: 1;
+}
+
+.input {
+    transition: width .35s linear;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 20px;
+    width: 150px;
+    background-color: #dddddd;
+}
+
+.input-focused {
+    width: 240px;
+}
+
+@keyframes myfirst
+{
+    from {top: 100px;opacity: 0;}
+    to {top: 0px;opacity: 1;}
+}
