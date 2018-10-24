@@ -20,13 +20,20 @@ export default function(Com) {
     }
 
     render() {
-      console.log(this.props);
+      let defaultStyle = {};
+      let style = {};
+      for(let key in this.props.changeStyle) {
+        defaultStyle[key] = this.props.changeStyle[key][0];
+        style[key] = spring(this.props.changeStyle[key][1], key == 'opacity' ? {stiffness: 60, damping: 30} : {});
+      }
+      console.log(defaultStyle);
+      console.log(style);
       return (
         <div >
-          <Motion defaultStyle={{top: this.props.changeStyle.top[0], opacity: this.props.changeStyle.opacity[0],}}
-                  style={{top: spring(this.props.changeStyle.top[1]), opacity: spring(this.props.changeStyle.opacity[1], {stiffness: 60, damping: 30})}}>
+          <Motion
+            defaultStyle={defaultStyle}
+            style={style}>
             {interpolatingStyle => {
-              console.log(interpolatingStyle);
               const newStyle = Object.assign({}, this.props.style, {position: 'relative'})
               return (
                 <Com style={Object.assign({}, interpolatingStyle, newStyle)} childrenRender={this.props.childrenRender()}/>

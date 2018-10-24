@@ -9,7 +9,6 @@ import MyAnimation from './componets/MyAnimation';
 
 class AnimationBox extends Component {
   render() {
-    console.log(this.props);
     const {childrenRender, ...rest} = this.props
     return <div {...rest}>{childrenRender}</div>;
   }
@@ -74,19 +73,35 @@ class App extends Component {
             )
           }}
         </MyTextRenderProps>
+        {/*<Ani*/}
+          {/*changeStyle={{*/}
+            {/*top: [200, 0],*/}
+            {/*opacity: [0, 1],*/}
+          {/*}}*/}
+          {/*style={{color: '#F00',backgroundColor: '#FFF',}}*/}
+          {/*childrenRender={() => {*/}
+            {/*return (*/}
+              {/*<button style={{}}>123</button>*/}
+            {/*)*/}
+          {/*}}*/}
+        {/*>*/}
+        {/*</Ani>*/}
         <Ani
           changeStyle={{
             top: [200, 0],
             opacity: [0, 1],
           }}
-          style={{color: '#F00',backgroundColor: '#FFF',}}
+          style={{backgroundColor: '#ffe837'}}
           childrenRender={() => {
             return (
-              <button style={{}}>123</button>
+              <div style={{display: 'flex',flexDirection: 'row',justifyContent: 'space-around'}}>
+                <div style={{width: 100,height: 100,backgroundColor: '#ff1b78'}}></div>
+                <div style={{width: 100,height: 100,backgroundColor: '#ff1b78'}}></div>
+                <div style={{width: 100,height: 100,backgroundColor: '#ff1b78'}}></div>
+              </div>
             )
           }}
-        >
-        </Ani>
+        />
       </div>
     );
   }
